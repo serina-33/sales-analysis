@@ -52,6 +52,27 @@ Groups data by month to find monthly sales trends
 
 Visualizes results with bar and line charts
 
+
+## 🧠 Example Code
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load sample sales data
+data = {
+    "Product": ["Notebook", "Pen", "Stapler"],
+    "UnitPrice": [3.5, 0.75, 7.0],
+    "Quantity": [20, 100, 5]
+}
+
+df = pd.DataFrame(data)
+df["Sales"] = df["UnitPrice"] * df["Quantity"]
+
+# Show total sales
+print("Total Sales:", df["Sales"].sum())
+
+
 📈 Example Output
 
 Total Sales: $141.00
